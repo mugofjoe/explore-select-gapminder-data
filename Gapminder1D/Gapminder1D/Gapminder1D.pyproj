@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Gapminder1D</Name>
     <RootNamespace>Gapminder1D</RootNamespace>
+    <InterpreterId>Global|VisualStudio|DAND</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Gapminder1D.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|DAND" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
