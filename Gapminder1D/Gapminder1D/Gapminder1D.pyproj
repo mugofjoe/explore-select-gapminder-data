@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0adc9bac-34ce-49af-a5d4-b14af16b3b7e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Gapminder1D.py</StartupFile>
+    <StartupFile>04_NumPy_Arrays.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
