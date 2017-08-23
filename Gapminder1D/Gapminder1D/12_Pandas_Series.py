@@ -1,6 +1,5 @@
 # exec(open(".//12_Pandas_Series.py"))
-print "Executing: 12 Pandas Series"
-
+print "Executing: 12 Pandas Series\n"
 
 import pandas as pd
 
@@ -51,7 +50,54 @@ if False:
     print a * 2
     print a >= 3
     print a[a >= 3]
-   
+  
+'''
+Below is my solution to the Problem of variable correlation
+'''
+def variable_correlation2(variable1, variable2):
+    '''
+    Fill in this function to calculate the number of data points for which
+    the directions of variable1 and variable2 relative to the mean are the
+    same, and the number of data points for which they are different.
+    Direction here means whether each value is above or below its mean.
+    
+    You can classify cases where the value is equal to the mean for one or
+    both variables however you like.
+    
+    Each argument will be a Pandas series.
+    
+    For example, if the inputs were pd.Series([1, 2, 3, 4]) and
+    pd.Series([4, 5, 6, 7]), then the output would be (4, 0).
+    This is because 1 and 4 are both below their means, 2 and 5 are both
+    below, 3 and 6 are both above, and 4 and 7 are both above.
+    
+    On the other hand, if the inputs were pd.Series([1, 2, 3, 4]) and
+    pd.Series([7, 6, 5, 4]), then the output would be (0, 4).
+    This is because 1 is below its mean but 7 is above its mean, and
+    so on.
+    '''
+    import numpy as np
+
+    same_direction = np.array(
+        ((variable1 > variable1.mean()) & (variable2 > variable2.mean())) \
+            |((variable1 < variable1.mean()) & (variable2 < variable2.mean())))
+
+    different_direction = np.array(
+        ((variable1 > variable1.mean()) & (variable2 < variable2.mean())) \
+            |((variable1 < variable1.mean()) & (variable2 > variable2.mean())))
+
+
+    num_same_direction = same_direction.sum()        # Replace this with your code
+    num_different_direction = different_direction.sum()   # Replace this with your code
+    
+    return (num_same_direction, num_different_direction)
+
+
+
+'''
+Below is Udacity's solution to the variable correlation problem
+'''
+
 def variable_correlation(variable1, variable2):
     '''
     Fill in this function to calculate the number of data points for which
@@ -74,7 +120,35 @@ def variable_correlation(variable1, variable2):
     This is because 1 is below its mean but 7 is above its mean, and
     so on.
     '''
-    num_same_direction = None        # Replace this with your code
-    num_different_direction = None   # Replace this with your code
-    
+
+    # create an array that should contain a boolean for each
+    # pair of data points
+    both_above = (variable1 > variable1.mean()) & \
+                 (variable2 > variable2.mean())
+    both_below = (variable1 < variable1.mean()) & \
+                 (variable2 < variable2.mean())
+    is_same_direction = both_above | both_below
+    num_same_direction = is_same_direction.sum()
+    num_different_direction = len(variable1) - num_same_direction
+  
     return (num_same_direction, num_different_direction)
+
+
+import numpy as np
+import pandas as pd
+
+a = np.array([1,2,3,4])
+s = pd.Series([1,2,3,4])
+
+s.describe()
+
+
+# Create a series with index
+life_expectancy2 = pd.Series([74.7, 75. , 83.4, 57.6],
+                             index = ['Albania',
+                                      'Algeria',
+                                      'Andorra',
+                                      'Angola'])
+
+
+
