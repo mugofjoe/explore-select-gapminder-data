@@ -1,3 +1,5 @@
+# exec(open(".//04_NumPy_Arrays.py"))
+
 import numpy as np
 
 # First 20 countries with employment data

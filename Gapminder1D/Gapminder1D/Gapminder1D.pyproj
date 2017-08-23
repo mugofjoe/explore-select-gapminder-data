@@ -25,6 +25,21 @@
     <Compile Include="04_NumPy_Arrays.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="07_Completion_Rate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Standardizing_Data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_Index_Arrays.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Plus_Equals_In_Place.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Pandas_Series.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Gapminder1D.py" />
   </ItemGroup>
   <ItemGroup>
