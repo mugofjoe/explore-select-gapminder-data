@@ -49,6 +49,15 @@
     <Compile Include="14_Series_Vectorized_Operations.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="15_Filling_Missing_Values.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="16_Pandas_Series_Apply.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="17_Plotting_In_Pandas.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|DAND" />

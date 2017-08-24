@@ -24,7 +24,14 @@ if False:
     print s1 + s2
 
 # Indexes do not overlap
-if True:
+if False:
     s1 = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
     s2 = pd.Series([10, 20, 30, 40], index=['e', 'f', 'g', 'h'])
     print s1 + s2
+
+# Uneven indexes
+if True:
+    t1 = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'i'])
+    t2 = pd.Series([10, 20, 30, 40, 50, 60], index=['e', 'f', 'g', 'h','i','j'])
+    print t1 + t2
+
