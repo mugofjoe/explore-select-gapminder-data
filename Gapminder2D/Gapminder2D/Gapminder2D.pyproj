@@ -26,6 +26,9 @@
     <Compile Include="04_Numpy_Axis.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="05_Accessing_DataFrames.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|DAND" />

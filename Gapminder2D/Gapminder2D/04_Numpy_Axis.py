@@ -48,3 +48,13 @@ def min_and_max_riders_per_day(ridership):
     min_daily_ridership = station_riders.min()
     
     return (max_daily_ridership, min_daily_ridership)
+
+
+import pandas as pd
+weekData = pd.DataFrame({
+    'temp': [70, 71, 72, 73, 74, 75, 76 ],
+    'condition': ['Cloudy','Clear','Windy','Clear','Stormy','Cloudy','Clear'],
+    'it_rained':[False, False, False, False, True, True, False]}, index = [
+            'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
+        ])
+    
