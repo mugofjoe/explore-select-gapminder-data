@@ -29,6 +29,12 @@
     <Compile Include="05_Accessing_DataFrames.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="07_Loading_Data_DataFrame.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Calculating_Correlation.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|DAND" />

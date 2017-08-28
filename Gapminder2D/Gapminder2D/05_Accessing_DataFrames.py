@@ -52,8 +52,8 @@ if False:
 if False:
     df = pd.DataFrame({'A': [0, 1, 2], 'B': [3, 4, 5]})
     print df.sum()
-    print df.sum(axis=1)
-    print df.values.sum()
+    print df.sum(axis=1)  # row total
+    print df.values.sum() # sum of all values
     
 def mean_riders_for_max_station(ridership):
     '''
@@ -64,7 +64,14 @@ def mean_riders_for_max_station(ridership):
     This is the same as a previous exercise, but this time the
     input is a Pandas DataFrame rather than a 2D NumPy array.
     '''
-    overall_mean = None # Replace this with your code
-    mean_for_max = None # Replace this with your code
+    # Find the station with the maximum riders on the first day
+    max_station = ridership.iloc[0].idxmax()
+
+    # Find the mean riders per day for that station
+    mean_for_max = ridership[max_station].mean()
+
+    # Use the mean of the numpy array that gets returned by the 
+    # values property
+    overall_mean = ridership.values.mean()
     
     return (overall_mean, mean_for_max)
