@@ -35,6 +35,9 @@
     <Compile Include="08_Calculating_Correlation.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="10_DataFrame_Vectorized_Operations.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|DAND" />
