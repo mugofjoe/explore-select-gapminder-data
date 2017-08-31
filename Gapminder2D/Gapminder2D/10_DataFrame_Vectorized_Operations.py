@@ -43,7 +43,7 @@ def get_hourly_entries_and_exits(entries_and_exits):
     first column, exits in the second).
     '''
     
-    return entries_and_exits - entries_and_exits.shift()
+    return entries_and_exits - entries_and_exits.shift(1)
 
 my_df = pd.DataFrame({
     'a': [8, 16, 6, 8, 12],
