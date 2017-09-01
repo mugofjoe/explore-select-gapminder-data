@@ -38,6 +38,9 @@
     <Compile Include="10_DataFrame_Vectorized_Operations.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="11_DataFrame_applymap.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|DAND" />
