@@ -1,5 +1,5 @@
 # exec(open(".//12_DataFrame_apply.py"))
-print "Executing DataFrame apply"
+print("Executing DataFrame apply")
 import pandas as pd
 
 grades_df = pd.DataFrame(
@@ -13,7 +13,7 @@ grades_df = pd.DataFrame(
 # Change False to True for this block of code to see what it does
 
 # DataFrame apply()
-if False:
+if True:
     def convert_grades_curve(exam_grades):
         # Pandas has a bult-in function that will perform this calculation
         # This will give the bottom 0% to 10% of students the grade 'F',
@@ -32,11 +32,20 @@ if False:
     # qcut() does not work on DataFrames, but we can use apply()
     # to call the function on each column separately
     print grades_df.apply(convert_grades_curve)
+
+def standardize_column(column):
+    # column_mean = column.mean()
+    # column_std  = column.std(ddof=0)
+    return (column - column.mean()) / column.std(ddof=0)
     
+
 def standardize(df):
     '''
     Fill in this function to standardize each column of the given
     DataFrame. To standardize a variable, convert each value to the
     number of standard deviations it is above or below the mean.
     '''
-    return None
+
+    return df.apply(standardize_column)
+
+print(standardize(grades_df))
