@@ -1,0 +1,15 @@
+{
+    "python.pythonPath": "D:/Software/Anaconda3/envs/DAND/python"
+}
+
+
+
+{
+    "workbench.iconTheme": "vscode-icons",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.zoomLevel": 0.60,
+    "python.pythonPath": "E:/Anaconda3/envs/DAND/python",
+    "editor.fontFamily": "'Overpass Mono', Consolas, 'Courier New', monospace",
+    "editor.fontWeight": "100",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe"
+}
