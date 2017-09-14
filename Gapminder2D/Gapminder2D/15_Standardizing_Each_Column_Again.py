@@ -69,8 +69,23 @@ def standardize_rows(df):
     
     This one is more challenging than standardizing each column!
     '''
+    mean_diffs = df.sub(df.mean(axis='columns'), axis='index')
+    return mean_diffs.div(grades_df.std(axis='columns'), axis='index')
+
+'''
+# Below is my version
+
+def standardize_rows(df):
+    '''
+    # Optional: Fill in this function to standardize each row of the given
+    # DataFrame. Again, try not to use apply().
+    
+    # This one is more challenging than standardizing each column!
+    '''
     mean_column = df.mean(axis='columns')
     std_column = df.std(axis='columns', ddof=0)
     return df.subtract(mean_column, axis='rows').div(std_column, axis='rows')
+
+'''
 
 print(standardize_rows(grades_df))
