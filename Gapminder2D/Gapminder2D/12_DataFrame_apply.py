@@ -9,7 +9,6 @@ grades_df = pd.DataFrame(
            'Fred', 'Greta', 'Humbert', 'Ivan', 'James']
 )
 
-
 # Change False to True for this block of code to see what it does
 
 # DataFrame apply()
