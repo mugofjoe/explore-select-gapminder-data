@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Adding using +
-if False:
+if True:
     s = pd.Series([1, 2, 3, 4])
     df = pd.DataFrame({
         0: [10, 20, 30, 40],
@@ -15,7 +15,7 @@ if False:
     print df + s
     
 # Adding with axis='index' (rows)
-if False:
+if True:
     s = pd.Series([1, 2, 3, 4])
     df = pd.DataFrame({
         0: [10, 20, 30, 40],
@@ -30,7 +30,7 @@ if False:
     # The functions sub(), mul(), and div() work similarly to add()
     
 # Adding with axis='columns'
-if False:
+if True:
     s = pd.Series([1, 2, 3, 4])
     df = pd.DataFrame({
         0: [10, 20, 30, 40],
