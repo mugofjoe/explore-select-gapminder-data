@@ -13,27 +13,27 @@ example_df = pd.DataFrame({
 # Change False to True for each block of code to see what it does
 
 # Examine DataFrame
-if False:
+if True:
     print example_df
     
 # Examine groups
-if False:
+if True:
     grouped_data = example_df.groupby('even')
     # The groups attribute is a dictionary mapping keys to lists of row indexes
     print grouped_data.groups
     
 # Group by multiple columns
-if False:
+if True:
     grouped_data = example_df.groupby(['even', 'above_three'])
     print grouped_data.groups
     
 # Get sum of each group
-if False:
+if True:
     grouped_data = example_df.groupby('even')
     print grouped_data.sum()
     
 # Limit columns in result
-if False:
+if True:
     grouped_data = example_df.groupby('even')
     
     # You can take one or more columns from the result DataFrame
@@ -47,7 +47,11 @@ if False:
     
 filename = '.\\nyc_subway_weather.csv'
 filenameUSIS = 'E:\\Google Drive\\Backpack\\Udacity Data Analyst Nanodegree\\03 Intro to Data Analysis\\L5 Numpy and Pandas for 2D Data\\nyc_subway_weather.csv'
-subway_df = pd.read_csv(filenameUSIS)
+filenameHome = 'D:\\Repos\\explore-select-gapminder-data\\data\\nyc_subway_weather.csv'
+
+
+# subway_df = pd.read_csv(filenameUSIS)
+subway_df = pd.read_csv(filenameHome)
 
 ### Write code here to group the subway data by a variable of your choice, then
 ### either print out the mean ridership within each group or create a plot.
