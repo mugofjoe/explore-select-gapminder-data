@@ -45,13 +45,51 @@ if True:
     # collapsing to a DataFrame. In this case, the result is the same.
     print grouped_data['value'].sum()
     
-filename = '.\\nyc_subway_weather.csv'
+filename = '\\..\\nyc_subway_weather.csv'
 filenameUSIS = 'E:\\Google Drive\\Backpack\\Udacity Data Analyst Nanodegree\\03 Intro to Data Analysis\\L5 Numpy and Pandas for 2D Data\\nyc_subway_weather.csv'
 filenameHome = 'D:\\Repos\\explore-select-gapminder-data\\data\\nyc_subway_weather.csv'
 
+import os
+basepath = os.path.abspath('16_Pandas_groupby.py')
+dname = os.path.dirname(basepath)
+os.chdir(dname)
 
-# subway_df = pd.read_csv(filenameUSIS)
-subway_df = pd.read_csv(filenameHome)
+# Load the subway dataset
+if os.environ['COMPUTERNAME'] == 'JDAZO':
+    filepath = os.path.normpath(os.path.join(basepath,'..\\..\\..\\data\\' \
+                                             'nyc_subway_weather.csv'))
+    subway_df = pd.read_csv(filepath)
+    
+# Glimpse at the top few records
+print(subway_df.head())
+
+
+# subway_df = pd.read_csv(filename)
+#subway_df = pd.read_csv(filenameHome)
 
 ### Write code here to group the subway data by a variable of your choice, then
 ### either print out the mean ridership within each group or create a plot.
+    
+stations = subway_df.groupby('UNIT')
+station_ridership = stations['ENTRIESn_hourly'].mean()
+print(station_ridership.head(n=5))
+
+'''
+# Subway ridership by day of the week
+'''
+subway_df.head()
+subway_df.groupby('day_week')
+subway_df.groupby('day_week').mean()
+
+subway_df.groupby('day_week').mean()['ENTRIESn_hourly']
+ridership_by_day = subway_df.groupby('day_week').mean()['ENTRIESn_hourly']
+
+#%pylab inline
+import seaborn as sns
+
+ridership_by_day.plot()
+
+print('\n')
+
+
+
