@@ -29,15 +29,15 @@ station_day = subway_df.groupby(['UNIT','day_week'])
 type(station_day)
 station_day.groups
 
-def get_hourly_entries_and_exits(entries_and_exits):
-    '''
-    Fill in this function to take a DataFrame with cumulative entries
-    and exits (entries in the first column, exits in the second) and
-    return a DataFrame with hourly entries and exits (entries in the
-    first column, exits in the second).
-    '''
-    
-    return entries_and_exits - entries_and_exits.shift(1)
+#def get_hourly_entries_and_exits(entries_and_exits):
+#    '''
+#    Fill in this function to take a DataFrame with cumulative entries
+#    and exits (entries in the first column, exits in the second) and
+#    return a DataFrame with hourly entries and exits (entries in the
+#    first column, exits in the second).
+#    '''
+#    
+#    return entries_and_exits - entries_and_exits.shift(1)
 
 '''
 Udacity Quiz
@@ -91,4 +91,14 @@ def get_hourly_entries_and_exits(entries_and_exits):
     you copy it here and rename it, you can use it and the `.apply()`
     function to help solve this problem.
     '''
-    return None
+    def hourly_for_group(entries_and_exits):
+        return entries_and_exits - entries_and_exits.shift(1)
+      
+    return ridership_df.groupby('UNIT')[['ENTRIESn', 'EXITSn']].apply(hourly_for_group)
+    
+
+
+
+
+
+
