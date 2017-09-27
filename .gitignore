@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
 # Data files or files in the data folder
 .csv
 .xlsx
