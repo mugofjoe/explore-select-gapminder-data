@@ -13,10 +13,10 @@ if True:
         'c': [5, 10, 15]
     })
     
-    def add_one(x):
-        return x + 1
+def add_one(x):
+    return x + 1
         
-    print df.applymap(add_one)
+print df.applymap(add_one)
     
 grades_df = pd.DataFrame(
     data={'exam1': [43, 81, 78, 75, 89, 70, 91, 65, 98, 87],
